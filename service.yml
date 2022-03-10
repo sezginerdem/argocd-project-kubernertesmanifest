@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: flaskdemo-service
 spec:
+  type: NodePort
   selector:
     app: flaskdemo
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
+    nodePort: 30007

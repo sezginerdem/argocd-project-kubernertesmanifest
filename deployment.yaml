@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: drsezginerdem/test-gitops:latest
+      - image: drsezginerdem/test-gitops:6
         name: flaskdemo
         resources: {}
 status: {}
@@ -33,6 +33,8 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
+selector:
+  app: flaskdemo
     targetPort: 5000
   selector:
     app: flaskdemo

@@ -19,3 +19,5 @@ spec:
       containers:
       - image: drsezginerdem/test-gitops:6
         name: flaskdemo
+        ports:
+        - containerPort: 8080
